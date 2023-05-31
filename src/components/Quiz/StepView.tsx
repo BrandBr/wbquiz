@@ -32,6 +32,7 @@ export const StepView = (): JSX.Element => {
         values as FormValues,
         (Math.random() + 1).toString(36).substring(7)
       );
+      window.location.href = "/stranica-spasibo.html";
     }
   };
 
@@ -40,7 +41,10 @@ export const StepView = (): JSX.Element => {
       title={WbQuizTitles[currentStep - 1]}
       onSubmit={(val) => onNext(val)}
       config={WbQuizConfig[currentStep - 1].map((el) =>
-        addValueToField(el, values as FormValues)
+        addValueToField(el, {
+          ...values,
+          url: window.location.href,
+        } as FormValues)
       )}
     />
   );

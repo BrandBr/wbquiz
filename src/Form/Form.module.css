@@ -3,7 +3,13 @@
   justify-content: flex-start;
   gap: 24px;
 }
-.formContent {
+.formActionsCentered {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.formContent,
+.formContentOneColumn {
   display: block;
 }
 @media (min-width: 767px) {
@@ -13,6 +19,7 @@
   .formContent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 }
 

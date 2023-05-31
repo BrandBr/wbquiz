@@ -6,7 +6,16 @@
   font-family: "Hagin Caps Medium", Sans-serif;
 }
 
+.buttonTextSmall {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: white;
+  font-family: "Hagin Caps Medium", Sans-serif;
+}
+
 .button {
+  cursor: pointer;
   background-color: #d9aa69;
   border-style: solid;
   border-width: 0 0 4px 0;
@@ -21,13 +30,29 @@
   padding: 20px;
 }
 
+.buttonSmall {
+  width: 100%;
+  cursor: pointer;
+  background-color: #d9aa69;
+  background-image: linear-gradient(
+    to right,
+    #dbaa68 0%,
+    #b47952 100%
+  ) !important;
+  overflow: hidden;
+  padding: 16px;
+}
+
 @media only screen and (min-width: 1000px) {
   .button {
     padding: 20px 40px;
   }
+  .buttonSmall {
+    padding: 12px;
+  }
 }
 
-.button:hover {
+.button:hover .buttonSmall:hover {
   background-color: #8c6140;
   border-color: #8c6140;
 }

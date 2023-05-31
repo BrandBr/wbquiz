@@ -33,8 +33,9 @@ export const addDocument = async (
 
   try {
     await fetch(Endpoints.Create, requestOptions);
-    message.success("Document created!");
   } catch {
-    message.error("Creation failed!");
+    message.error(
+      "Ошибка, заявка не сохранена, пожалуйста, свяжитесь с менеджеромю"
+    );
   }
 };

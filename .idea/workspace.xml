@@ -4,36 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c23812e-b8b9-4047-b05f-e88c5ba7f012" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ArrayString/ArrayString.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ArrayString/ArrayString.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/Form.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/Form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/Form.utils.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/FormButton/FormButton.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/FormButton/FormButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/formField.utils.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/create.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/closeIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CtaButton/CtaButton.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CtaButton/CtaButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindow.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindows.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Progress/Progress.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Progress/Progress.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Progress/ProgressBar/ProgressBar.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Progress/ProgressBar/ProgressBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Quiz/Quiz.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Quiz/StepView.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Quiz/WbQuizConfig.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+    <list default="true" id="4c23812e-b8b9-4047-b05f-e88c5ba7f012" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/src/AskQuestion.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CallRequest.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RequestForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/QuizContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/QuizContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/Form.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Form.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/create.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/create.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CtaButton/CtaButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CtaButton/CtaButton.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CtaButton/CtaButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CtaButton/CtaButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindows.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindows.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Progress/ProgressBar/ProgressBar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Progress/ProgressBar/ProgressBar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Quiz/StepView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quiz/StepView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Quiz/WbQuizConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quiz/WbQuizConfig.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
@@ -63,23 +49,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Женя/Documents/GitHub/VO&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Женя\\Documents\\GitHub\\wbquiz\\node_modules\\prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Женя\\Documents\\GitHub\\wbquiz\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Женя/Documents/GitHub/wbquiz",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Женя\\Documents\\GitHub\\wbquiz\\node_modules\\prettier",
+    "ts.external.directory.path": "C:\\Users\\Женя\\Documents\\GitHub\\wbquiz\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Женя\Documents\GitHub\wbquiz\src\Form\FormButton" />
@@ -147,7 +133,17 @@
       <workItem from="1685363429040" duration="19000" />
       <workItem from="1685374040926" duration="317000" />
       <workItem from="1685387465856" duration="10000" />
+      <workItem from="1685557857079" duration="1581000" />
+      <workItem from="1685561027962" duration="3865000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1685557955931</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685557955931</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,5 +159,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>

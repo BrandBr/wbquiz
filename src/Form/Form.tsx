@@ -56,6 +56,9 @@ export type FormProps = {
   onSubmit: (val: FormValues) => void;
   title?: string;
   description?: string;
+  isOneColumn?: boolean;
+  isLabelHidden?: boolean;
+  isButtonCentered?: boolean;
   customButton?: {
     isDanger?: boolean;
     text?: string;
@@ -70,6 +73,9 @@ export const Form = ({
   description,
   customButton,
   onBackClick,
+  isOneColumn = false,
+  isLabelHidden = true,
+  isButtonCentered = false,
 }: FormProps) => {
   const { Item } = ANTDForm;
   const [form] = ANTDForm.useForm();
@@ -211,6 +217,7 @@ export const Form = ({
       form={form}
       onFinish={submit}
       className={css.wrapper}
+      labelWrap
     >
       {title && (
         <Title level={4} style={{ marginTop: 0 }} className={css.title}>
@@ -218,7 +225,7 @@ export const Form = ({
         </Title>
       )}
       {description && <Paragraph>{description}</Paragraph>}
-      <div className={css.formContent}>
+      <div className={isOneColumn ? css.formContentOneColumn : css.formContent}>
         <div>
           {config.map((optionSettings) => {
             const {
@@ -229,6 +236,7 @@ export const Form = ({
             } = optionSettings;
             return (
               <Item
+                className={isLabelHidden ? "hiddenLabel" : ""}
                 key={name}
                 label={label}
                 name={name}
@@ -247,7 +255,11 @@ export const Form = ({
         </div>
         <div>
           <Item>
-            <div className={css.formActions}>
+            <div
+              className={
+                isButtonCentered ? css.formActionsCentered : css.formActions
+              }
+            >
               {onBackClick && <FormButton onClick={onBackClick} text="Назад" />}
               <FormButton
                 text={customButton?.text}

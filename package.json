@@ -27,6 +27,7 @@
     "eject": "react-scripts eject",
     "f": "prettier --write src"
   },
+  "homepage": "https://welcome-belarus.ru/quiz/",
   "eslintConfig": {
     "extends": [
       "react-app",

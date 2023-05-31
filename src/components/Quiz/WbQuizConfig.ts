@@ -125,5 +125,24 @@ export const WbQuizConfig: FormFieldType[][] = [
       placeholder: "Email",
       helper: "Внимательно проверьте почту",
     },
+    {
+      name: "formType",
+      type: "string",
+      options: {
+        displayOnFront: false,
+      },
+      label: "Ф.И.О. или наименование турагентства",
+      placeholder: "Введите имя или название",
+      value: "Запрос с квиза",
+    },
+    {
+      name: "url",
+      type: "string",
+      options: {
+        displayOnFront: false,
+      },
+      label: "",
+      placeholder: "",
+    },
   ],
 ];
