@@ -1,0 +1,38 @@
+.formActions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+}
+.formContent {
+  display: block;
+}
+@media (min-width: 767px) {
+  .formActions {
+    justify-content: flex-start;
+  }
+  .formContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: "Hagin Caps Medium", Sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  color: #222;
+}
+
+.helper {
+  color: #737373;
+  font-size: 14px;
+  font-style: italic;
+}

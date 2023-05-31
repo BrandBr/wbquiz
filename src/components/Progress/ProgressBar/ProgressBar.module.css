@@ -1,0 +1,11 @@
+.text {
+  color: #222222;
+  font-family: "Gilroy-light", Sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.bar {
+  padding: 4px;
+}

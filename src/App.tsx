@@ -1,11 +1,18 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import { CtaButton } from "./components/CtaButton/CtaButton";
+import { ModalWindow } from "./components/ModalWindow/ModalWindow";
+import { Quiz } from "./components/Quiz/Quiz";
 
 function App() {
+  const [isOpen, setIsOpen] = React.useState(false);
   return (
-    <div className="App">
-        <p>Hello qorld</p>
+    <div style={{ padding: 6, position: "relative" }}>
+      <CtaButton onClick={() => setIsOpen(true)} />
+
+      <ModalWindow isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <Quiz />
+      </ModalWindow>
     </div>
   );
 }
