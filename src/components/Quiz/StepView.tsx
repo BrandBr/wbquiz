@@ -20,8 +20,6 @@ export const StepView = (): JSX.Element => {
   }, []);
 
   const onNext = async (valuesLocal: FormValues) => {
-    console.log(valuesLocal);
-
     if (currentStep < stepLimit) {
       setValues({ ...values, ...valuesLocal });
       setCurrentStep(currentStep + 1);
@@ -44,6 +42,8 @@ export const StepView = (): JSX.Element => {
         addValueToField(el, {
           ...values,
           url: window.location.href,
+          formType: "Квиз",
+          sight: [],
         } as FormValues)
       )}
     />

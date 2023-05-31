@@ -15,7 +15,6 @@ export const addValueToField = (
 };
 
 export const formValuesHandle = (values: FormValues) => {
-  console.log(values);
   return Object.keys(values).reduce((acc, key) => {
     if (values[key] instanceof dayjs) {
       acc[key] = dayjs(values[key] as string).valueOf();

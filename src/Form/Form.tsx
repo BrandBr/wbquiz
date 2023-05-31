@@ -176,25 +176,7 @@ export const Form = ({
           <Checkbox.Group>
             <div className={css.wrapper}>
               {(field.options.dictionary as string[])?.map((item) => (
-                <Checkbox
-                  key={item}
-                  value={item}
-                  checked={form.getFieldValue(key)?.includes(item)}
-                  onChange={(isChecked) => {
-                    const currVal = (form.getFieldValue(key) || []) as string[];
-
-                    if (isChecked) {
-                      form.setFieldValue(key, [...currVal, item]);
-                    } else {
-                      form.setFieldValue(
-                        key,
-                        currVal.filter((el) => el !== item)
-                      );
-                    }
-                  }}
-                >
-                  {item}
-                </Checkbox>
+                <Checkbox value={item}>{item}</Checkbox>
               ))}
             </div>
           </Checkbox.Group>

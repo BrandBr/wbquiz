@@ -3,7 +3,7 @@ import { FormFieldType } from "../../Form/Form";
 export const WbQuizTitles = [
   "Какой тип тура вам необходим?",
   "Укажите количество человек и число бесплатных сопровождающих",
-  "Что бы Вы хотели увидеть во время тура?",
+  // "Что бы Вы хотели увидеть во время тура?",
   "Укажите ваш город",
   "Какая продолжительность тура Вам необходима?",
   "Где Вы хотите проживать?",
@@ -29,6 +29,25 @@ export const WbQuizConfig: FormFieldType[][] = [
       label: "Тип тура",
       rules: [{ required: true, message: `Пожалуйста введите тип тура` }],
     },
+    {
+      name: "formType",
+      type: "string",
+      options: {
+        displayOnFront: false,
+      },
+      label: "Ф.И.О. или наименование турагентства",
+      placeholder: "Введите имя или название",
+      value: "Запрос с квиза",
+    },
+    {
+      name: "url",
+      type: "string",
+      options: {
+        displayOnFront: false,
+      },
+      label: "",
+      placeholder: "",
+    },
   ],
   [
     {
@@ -48,23 +67,23 @@ export const WbQuizConfig: FormFieldType[][] = [
       helper: "Можете указать при блезительное количество",
     },
   ],
-  [
-    {
-      name: "sight",
-      type: "checkboxGroup",
-      options: {
-        dictionary: [
-          "Старинные замки",
-          "Музеи",
-          "Местную архитектуру",
-          "Элементы белорусского фольклера",
-          "Экскурсии по предприятиям",
-        ],
-      },
-      label: "Что хотите увидеть",
-      helper: "Выберите один или несколько вариантов",
-    },
-  ],
+  // [
+  //   {
+  //     name: "sight",
+  //     type: "checkboxGroup",
+  //     options: {
+  //       dictionary: [
+  //         "Старинные замки",
+  //         "Музеи",
+  //         "Местную архитектуру",
+  //         "Элементы белорусского фольклера",
+  //         "Экскурсии по предприятиям",
+  //       ],
+  //     },
+  //     label: "Что хотите увидеть",
+  //     helper: "Выберите один или несколько вариантов",
+  //   },
+  // ],
   [
     {
       name: "city",
@@ -124,25 +143,6 @@ export const WbQuizConfig: FormFieldType[][] = [
       label: "Почта",
       placeholder: "Email",
       helper: "Внимательно проверьте почту",
-    },
-    {
-      name: "formType",
-      type: "string",
-      options: {
-        displayOnFront: false,
-      },
-      label: "Ф.И.О. или наименование турагентства",
-      placeholder: "Введите имя или название",
-      value: "Запрос с квиза",
-    },
-    {
-      name: "url",
-      type: "string",
-      options: {
-        displayOnFront: false,
-      },
-      label: "",
-      placeholder: "",
     },
   ],
 ];

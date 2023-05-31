@@ -7,6 +7,7 @@
 }
 
 .button {
+  cursor: pointer;
   background-color: #d9aa69;
   border-style: solid;
   border-width: 0 0 4px 0;

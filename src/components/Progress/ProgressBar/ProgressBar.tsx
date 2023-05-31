@@ -6,7 +6,6 @@ type ProgressBarProps = {
 };
 
 export const ProgressBar = ({ text, percent }: ProgressBarProps) => {
-  console.log(`linear-gradient(90deg, #deb457 ${percent}, #e2e2e2 0%)`);
   return (
     <div
       className={css.bar}

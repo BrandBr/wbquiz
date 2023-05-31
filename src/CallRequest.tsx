@@ -83,6 +83,7 @@ function CallRequest() {
           config={requestTourFormConfig.map((el) =>
             addValueToField(el, {
               url: window.location.href,
+              formType: "Форма заказа звонка",
             } as unknown as FormValues)
           )}
           isLabelHidden={false}

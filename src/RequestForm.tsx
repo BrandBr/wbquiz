@@ -105,6 +105,7 @@ function RequestForm() {
           config={requestTourFormConfig.map((el) =>
             addValueToField(el, {
               url: window.location.href,
+              formType: "Форма заявки на тур",
             } as unknown as FormValues)
           )}
           isLabelHidden={false}

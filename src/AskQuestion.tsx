@@ -80,6 +80,7 @@ function AskQuestion() {
           config={requestTourFormConfig.map((el) =>
             addValueToField(el, {
               url: window.location.href,
+              formType: "Форма вопроса",
             } as unknown as FormValues)
           )}
           isLabelHidden={false}
