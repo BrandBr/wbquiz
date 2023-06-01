@@ -27,7 +27,7 @@ export const StepView = (): JSX.Element => {
       setValues({ ...values, ...valuesLocal });
       await addDocument(
         TableName.WB_Quiz,
-        values as FormValues,
+        { ...values, ...valuesLocal } as FormValues,
         (Math.random() + 1).toString(36).substring(7)
       );
       window.location.href = "/stranica-spasibo.html";

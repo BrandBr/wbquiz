@@ -8,6 +8,8 @@
   border-radius: 6px;
   width: 90vw;
   transition: all 300ms ease-in-out;
+  overflow: auto;
+  max-height: 90vh;
 }
 
 .content {
@@ -15,6 +17,7 @@
   line-height: 1.5;
   color: #333;
   margin-top: 16px;
+
 }
 
 .hidden {
@@ -24,8 +27,8 @@
 .closeButton {
   position: absolute;
   height: 32px;
-  right: -14px;
-  top: -14px;
+  right: 0;
+  top: 0;
   border-radius: 5px;
   background-color: rgba(221, 153, 51, 1);
 }
