@@ -56,6 +56,7 @@ const requestTourFormConfig: FormFieldType[] = [
     label: "Адрес электронной почты :",
     placeholder: "Введите адрес почты",
     helper: "Пожалуйста, внимательно проверьте адрес почты",
+    rules: [{ required: true, message: "Это поле обязательно" }],
   },
   {
     type: "date",

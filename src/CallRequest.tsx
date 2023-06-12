@@ -40,6 +40,7 @@ const requestTourFormConfig: FormFieldType[] = [
     label: "Контактные телефоны с кодом:",
     placeholder: "Введите номер телефона",
     helper: "Пожалуйста, внимательно проверьте номер",
+    rules: [{ required: true, message: "Это поле обязательно" }],
   },
   {
     name: "timeToCall",

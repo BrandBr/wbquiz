@@ -143,6 +143,7 @@ export const WbQuizConfig: FormFieldType[][] = [
       label: "Почта",
       placeholder: "Email",
       helper: "Внимательно проверьте почту",
+      rules: [{ required: true, message: "Это поле обязательно" }],
     },
   ],
 ];
