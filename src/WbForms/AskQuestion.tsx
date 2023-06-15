@@ -1,10 +1,10 @@
 import React from "react";
-import "./App.css";
-import { CtaButton } from "./components/CtaButton/CtaButton";
-import { ModalWindow } from "./components/ModalWindow/ModalWindow";
-import { addValueToField } from "./Form/Form.utils";
-import { Form, FormFieldType, FormValues } from "./Form/Form";
-import { addDocument, TableName } from "./api/create";
+import "../App.css";
+import { CtaButton } from "../components/CtaButton/CtaButton";
+import { ModalWindow } from "../components/ModalWindow/ModalWindow";
+import { addValueToField } from "../Form/Form.utils";
+import { Form, FormFieldType, FormValues } from "../Form/Form";
+import { addDocument, TableName } from "../api/create";
 
 const requestTourFormConfig: FormFieldType[] = [
   {

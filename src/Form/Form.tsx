@@ -64,6 +64,7 @@ export type FormProps = {
     text?: string;
     isDisabled?: boolean;
   };
+  isVo?: boolean;
 };
 
 export const Form = ({
@@ -76,6 +77,7 @@ export const Form = ({
   isOneColumn = false,
   isLabelHidden = true,
   isButtonCentered = false,
+  isVo = false,
 }: FormProps) => {
   const { Item } = ANTDForm;
   const [form] = ANTDForm.useForm();
@@ -242,10 +244,17 @@ export const Form = ({
                 isButtonCentered ? css.formActionsCentered : css.formActions
               }
             >
-              {onBackClick && <FormButton onClick={onBackClick} text="Назад" />}
+              {onBackClick && (
+                <FormButton
+                  onClick={onBackClick}
+                  text="Назад"
+                  isVoButton={isVo}
+                />
+              )}
               <FormButton
                 text={customButton?.text}
                 isDisabled={!!customButton?.isDisabled}
+                isVoButton={isVo}
               />
             </div>
           </Item>

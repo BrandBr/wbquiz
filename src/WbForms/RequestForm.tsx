@@ -1,10 +1,10 @@
 import React from "react";
-import "./App.css";
-import { CtaButton } from "./components/CtaButton/CtaButton";
-import { ModalWindow } from "./components/ModalWindow/ModalWindow";
-import { addValueToField } from "./Form/Form.utils";
-import { Form, FormFieldType, FormValues } from "./Form/Form";
-import { addDocument, TableName } from "./api/create";
+import "../App.css";
+import { CtaButton } from "../components/CtaButton/CtaButton";
+import { ModalWindow } from "../components/ModalWindow/ModalWindow";
+import { addValueToField } from "../Form/Form.utils";
+import { Form, FormFieldType, FormValues } from "../Form/Form";
+import { addDocument, TableName } from "../api/create";
 
 const requestTourFormConfig: FormFieldType[] = [
   {
@@ -15,7 +15,7 @@ const requestTourFormConfig: FormFieldType[] = [
     },
     label: "Ф.И.О. или наименование турагентства",
     placeholder: "Введите имя или название",
-    value: "Заказать звонок",
+    value: "Заявка на тур",
   },
   {
     name: "url",
@@ -30,8 +30,16 @@ const requestTourFormConfig: FormFieldType[] = [
     name: "name",
     type: "string",
     options: {},
-    label: "Имя",
+    label: "Ф.И.О. или наименование турагентства",
     placeholder: "Введите имя или название",
+  },
+
+  {
+    name: "cityLive",
+    type: "string",
+    options: {},
+    label: "Город вашего проживания (нахождения)",
+    placeholder: "Введите город проживания",
   },
   {
     name: "phone",
@@ -40,25 +48,39 @@ const requestTourFormConfig: FormFieldType[] = [
     label: "Контактные телефоны с кодом:",
     placeholder: "Введите номер телефона",
     helper: "Пожалуйста, внимательно проверьте номер",
+  },
+  {
+    name: "email",
+    type: "string",
+    options: {},
+    label: "Адрес электронной почты :",
+    placeholder: "Введите адрес почты",
+    helper: "Пожалуйста, внимательно проверьте адрес почты",
     rules: [{ required: true, message: "Это поле обязательно" }],
   },
   {
-    name: "timeToCall",
-    type: "string",
+    type: "date",
+    name: "startDate",
     options: {},
-    label: "Время удобное для звонка",
-    placeholder: "Введите время",
+    label: "Дата старта тура",
+    helper: "Можете ввести приблизительную дату",
+  },
+  {
+    name: "peoples",
+    type: "number",
+    options: {},
+    label: "Количество человек в группе:",
+    placeholder: "Введите количество человек",
   },
   {
     name: "comment",
     type: "string",
     options: {},
-    label: "Ваш вопрос",
+    label: "Ваш комментарий к заявке:",
     placeholder: "Введите ваши пожелания",
   },
 ];
-
-function CallRequest() {
+function RequestForm() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const onNext = async (values: FormValues) => {
@@ -73,18 +95,18 @@ function CallRequest() {
     <div style={{ padding: 6, position: "relative" }}>
       <CtaButton
         onClick={() => setIsOpen(true)}
-        text="Заказать звонок"
-        isSmall
+        text="Отправить заявку на тур"
       />
 
       <ModalWindow isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <Form
           isOneColumn
+          title="Форма заявки на тур"
           onSubmit={(val) => onNext(val)}
           config={requestTourFormConfig.map((el) =>
             addValueToField(el, {
               url: window.location.href,
-              formType: "Форма заказа звонка",
+              formType: "Форма заявки на тур",
             } as unknown as FormValues)
           )}
           isLabelHidden={false}
@@ -96,4 +118,4 @@ function CallRequest() {
   );
 }
 
-export default CallRequest;
+export default RequestForm;

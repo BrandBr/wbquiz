@@ -1,10 +1,10 @@
 import React from "react";
-import "./App.css";
-import { CtaButton } from "./components/CtaButton/CtaButton";
-import { ModalWindow } from "./components/ModalWindow/ModalWindow";
-import { addValueToField } from "./Form/Form.utils";
-import { Form, FormFieldType, FormValues } from "./Form/Form";
-import { addDocument, TableName } from "./api/create";
+import "../App.css";
+import { ModalWindow } from "../components/ModalWindow/ModalWindow";
+import { addValueToField } from "../Form/Form.utils";
+import { Form, FormFieldType, FormValues } from "../Form/Form";
+import { addDocument, TableName } from "../api/create";
+import { VoCtaButton } from "../components/VoCtaButton/VoCtaButton";
 
 const requestTourFormConfig: FormFieldType[] = [
   {
@@ -80,7 +80,7 @@ const requestTourFormConfig: FormFieldType[] = [
     placeholder: "Введите ваши пожелания",
   },
 ];
-function RequestForm() {
+function VoRequestForm() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const onNext = async (values: FormValues) => {
@@ -93,12 +93,9 @@ function RequestForm() {
   };
   return (
     <div style={{ padding: 6, position: "relative" }}>
-      <CtaButton
-        onClick={() => setIsOpen(true)}
-        text="Отправить заявку на тур"
-      />
+      <VoCtaButton onClick={() => setIsOpen(true)} text="Отправить заявку" />
 
-      <ModalWindow isOpen={isOpen} onClose={() => setIsOpen(false)}>
+      <ModalWindow isVo={true} isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <Form
           isOneColumn
           title="Форма заявки на тур"
@@ -112,10 +109,11 @@ function RequestForm() {
           isLabelHidden={false}
           customButton={{ text: "Отправить" }}
           isButtonCentered
+          isVo={true}
         />
       </ModalWindow>
     </div>
   );
 }
 
-export default RequestForm;
+export default VoRequestForm;

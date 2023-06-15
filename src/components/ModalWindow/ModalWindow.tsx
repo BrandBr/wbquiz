@@ -6,17 +6,23 @@ type ModalWindowProps = {
   children: React.ReactNode;
   isOpen: boolean;
   onClose: () => void;
+  isVo?: boolean;
 };
 
 export const ModalWindow = ({
   children,
   isOpen,
   onClose,
+  isVo = false,
 }: ModalWindowProps) => {
   return (
     <div className={isOpen ? css.background : css.hidden}>
       <div className={css.backtop}>
-        <img className={css.closeButton} src={closeIcon} onClick={onClose} />
+        <img
+          className={isVo ? css.voCloseButton : css.closeButton}
+          src={closeIcon}
+          onClick={onClose}
+        />
         <div className={css.content}>{children}</div>
       </div>
     </div>

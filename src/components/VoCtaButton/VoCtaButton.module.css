@@ -1,32 +1,22 @@
 .buttonText {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: white;
+}
+
+.buttonTextSmall {
   font-size: 18px;
   line-height: 24px;
   font-weight: 500;
   color: white;
-  font-family: "Hagin Caps Medium", Sans-serif;
 }
 
 .button {
   cursor: pointer;
   background-color: #d9aa69;
   border-style: solid;
-  border-width: 0 0 4px 0;
-  border-color: #8c6140;
-  background-image: linear-gradient(
-    to right,
-    #dbaa68 0%,
-    #b47952 100%
-  ) !important;
-  border-radius: 6px;
-  overflow: hidden;
-  padding: 16px 32px;
-}
-
-.voButton {
-  cursor: pointer;
-  background-color: #d9aa69;
-  border-style: solid;
-  border-width: 0 0 4px 0;
+  border-width: 0 0 6px 0;
   border-color: #993c01;
   background-image: linear-gradient(
     to right,
@@ -35,14 +25,26 @@
   ) !important;
   border-radius: 50px;
   overflow: hidden;
-  padding: 16px 32px;
+  padding: 10px 20px;
+  transition: all 500ms ease-in-out;
 }
 
-.button:hover {
-  background-color: #8c6140;
-  border-color: #8c6140;
+.buttonSmall {
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  border-color: #993c01;
+  background-image: linear-gradient(
+    to right,
+    #ff690c 0%,
+    #f98136 100%
+  ) !important;
+  overflow: hidden;
+  padding: 16px;
 }
-.voButton:hover {
+
+.button:hover,
+.buttonSmall:hover {
   border-color: #006bad !important;
   background-color: #006bad !important;
   background-image: linear-gradient(
@@ -53,6 +55,5 @@
 }
 
 .buttonWrapper {
-  display: flex;
-  justify-content: center;
+
 }

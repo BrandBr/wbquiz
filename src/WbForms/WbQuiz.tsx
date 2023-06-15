@@ -1,10 +1,10 @@
 import React from "react";
-import "./App.css";
-import { CtaButton } from "./components/CtaButton/CtaButton";
-import { ModalWindow } from "./components/ModalWindow/ModalWindow";
-import { Quiz } from "./components/Quiz/Quiz";
+import "../App.css";
+import { CtaButton } from "../components/CtaButton/CtaButton";
+import { ModalWindow } from "../components/ModalWindow/ModalWindow";
+import { Quiz } from "../components/Quiz/Quiz";
 
-function App() {
+function WbQuiz() {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <div style={{ padding: 6, position: "relative" }}>
@@ -17,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default WbQuiz;
