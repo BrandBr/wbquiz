@@ -4,16 +4,19 @@ import { message } from "antd";
 
 export enum TableName {
   WB_Quiz = "WB_Quiz",
+  VO_Quiz = 'VO_Quiz'
 }
 
 export enum Endpoints {
   Create = "https://welcome-belarus.ru/wp-content/uploads/crm/requests/create.php",
+  CreateVo = "https://welcome-belarus.ru/wp-content/uploads/crm/requests/createVo.php",
 }
 
 export const addDocument = async (
   table: TableName,
   data: FormValues,
-  secret: string
+  secret: string,
+  isVo?: boolean
 ) => {
   const uuid = nanoid();
   const body = JSON.stringify({
@@ -32,7 +35,7 @@ export const addDocument = async (
   };
 
   try {
-    await fetch(Endpoints.Create, requestOptions);
+    await fetch(isVo ? Endpoints.CreateVo : Endpoints.Create, requestOptions);
   } catch {
     message.error(
       "Ошибка, заявка не сохранена, пожалуйста, свяжитесь с менеджеромю"

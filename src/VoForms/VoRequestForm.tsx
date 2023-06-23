@@ -59,7 +59,7 @@ const requestTourFormConfig: FormFieldType[] = [
     rules: [{ required: true, message: "Это поле обязательно" }],
   },
   {
-    type: "date",
+    type: "string",
     name: "startDate",
     options: {},
     label: "Дата старта тура",
@@ -85,11 +85,12 @@ function VoRequestForm() {
 
   const onNext = async (values: FormValues) => {
     await addDocument(
-      TableName.WB_Quiz,
+      TableName.VO_Quiz,
       values as FormValues,
-      (Math.random() + 1).toString(36).substring(7)
+      (Math.random() + 1).toString(36).substring(7),
+      true
     );
-    window.location.href = "/stranica-spasibo.html";
+    //window.location.href = "/stranica-spasibo.html";
   };
   return (
     <div style={{ padding: 6, position: "relative" }}>
