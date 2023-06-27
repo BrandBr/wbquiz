@@ -5,19 +5,20 @@ import { TableName } from "../../api/create";
 import { FormFieldType } from "../../Form/Form";
 
 type QuizType = {
-  titles: string[]
-  config: FormFieldType[][],
-  table: TableName
-}
+  titles: string[];
+  config: FormFieldType[][];
+  table: TableName;
+  isVo?: boolean;
+};
 
-export const Quiz = ({titles,table, config}: QuizType) => {
+export const Quiz = ({ titles, table, config, isVo }: QuizType) => {
   const { currentStep, stepLimit } = useQuizContext();
 
   return (
     <>
       <Progress currStep={currentStep} lastStep={stepLimit} />
       <div>
-        <StepView config={config} table={table} titles={titles} />
+        <StepView config={config} table={table} titles={titles} isVo={isVo} />
       </div>
     </>
   );

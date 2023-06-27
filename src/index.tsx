@@ -9,6 +9,7 @@ import AskQuestion from "./WbForms/AskQuestion";
 import CallRequest from "./WbForms/CallRequest";
 import VoRequestFormBelarus from "./VoForms/VoRequestFormBelarus";
 import VoRequestTour from "./VoForms/VoRequestTour";
+import { VoQuizOpened } from "./VoForms/VoQuizOpened/VoQuizOpened";
 
 const wbQuizContainer = document.getElementById("wbQuiz") as HTMLElement;
 if (wbQuizContainer) {
@@ -109,6 +110,17 @@ if (voRequestFormSecond) {
   callRequest.render(
     <React.StrictMode>
       <VoRequestTour />
+    </React.StrictMode>
+  );
+}
+
+const voQuiz = document.getElementById("voQuiz") as HTMLElement;
+if (voQuiz) {
+  const callRequest = ReactDOM.createRoot(voQuiz);
+
+  callRequest.render(
+    <React.StrictMode>
+      <VoQuizOpened />
     </React.StrictMode>
   );
 }

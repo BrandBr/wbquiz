@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c23812e-b8b9-4047-b05f-e88c5ba7f012" name="Changes" comment="add validation on sensetive field">
-      <change afterPath="$PROJECT_DIR$/src/VoForms/VoRequestTour.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VoForms/VoQuizOpened/VoQuizOpened.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VoForms/VoQuizOpened/VoQuizOpened.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VoForms/VoRequestForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/VoForms/VoRequestFormBelarus.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/create.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/create.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WbForms/WbQuiz.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/WbForms/WbQuiz.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Quiz/Quiz.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quiz/Quiz.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Quiz/StepView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quiz/StepView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VoCtaButton/VoCtaButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VoCtaButton/VoCtaButton.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/QuizContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/QuizContext.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +28,8 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -66,6 +66,7 @@
       <recent name="C:\Users\Женя\Documents\GitHub\wbquiz\src\components\ModalWindow" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Женя\Documents\GitHub\wbquiz\src\VoForms\VoQuizOpened" />
       <recent name="C:\Users\Женя\Documents\GitHub\wbquiz\src\WbForms" />
       <recent name="C:\Users\Женя\Documents\GitHub\wbquiz\src\Form" />
       <recent name="C:\Users\Женя\Documents\GitHub\wbquiz\src\assets\icons" />
@@ -139,7 +140,7 @@
       <workItem from="1687773502525" duration="2581000" />
       <workItem from="1687856786603" duration="134000" />
       <workItem from="1687857394948" duration="995000" />
-      <workItem from="1687896118037" duration="406000" />
+      <workItem from="1687896118037" duration="1026000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1685557955931</created>
@@ -176,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686595213895</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add validation on sensetive field">
+      <created>1687896736997</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687896736997</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

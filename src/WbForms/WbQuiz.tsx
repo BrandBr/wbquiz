@@ -13,7 +13,11 @@ function WbQuiz() {
       <CtaButton onClick={() => setIsOpen(true)} />
 
       <ModalWindow isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Quiz config={WbQuizConfig} table={TableName.WB_Quiz} titles={WbQuizTitles} />
+        <Quiz
+          config={WbQuizConfig}
+          table={TableName.WB_Quiz}
+          titles={WbQuizTitles}
+        />
       </ModalWindow>
     </div>
   );

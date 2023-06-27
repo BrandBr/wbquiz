@@ -5,11 +5,17 @@ import { useEffect } from "react";
 import { addDocument, TableName } from "../../api/create";
 
 type StepViewType = {
-  titles: string[]
-  config: FormFieldType[][],
-  table: TableName
-}
-export const StepView = ({titles, config, table}: StepViewType): JSX.Element => {
+  titles: string[];
+  config: FormFieldType[][];
+  table: TableName;
+  isVo?: boolean;
+};
+export const StepView = ({
+  titles,
+  config,
+  table,
+  isVo = false,
+}: StepViewType): JSX.Element => {
   const {
     currentStep,
     stepLimit,
@@ -20,7 +26,7 @@ export const StepView = ({titles, config, table}: StepViewType): JSX.Element => 
   } = useQuizContext();
 
   useEffect(() => {
-    setStepLimit(config.length);
+    setStepLimit(config?.length || 0);
   }, []);
 
   const onNext = async (valuesLocal: FormValues) => {
@@ -32,7 +38,8 @@ export const StepView = ({titles, config, table}: StepViewType): JSX.Element => 
       await addDocument(
         table,
         { ...values, ...valuesLocal } as FormValues,
-        (Math.random() + 1).toString(36).substring(7)
+        (Math.random() + 1).toString(36).substring(7),
+        isVo
       );
       window.location.href = "/stranica-spasibo.html";
     }
