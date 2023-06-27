@@ -15,7 +15,7 @@ const requestTourFormConfig: FormFieldType[] = [
     },
     label: "Ф.И.О. или наименование турагентства",
     placeholder: "Введите имя или название",
-    value: "Заявка на тур",
+    value: "Заказать звонок",
   },
   {
     name: "url",
@@ -30,16 +30,8 @@ const requestTourFormConfig: FormFieldType[] = [
     name: "name",
     type: "string",
     options: {},
-    label: "Ф.И.О. или наименование турагентства",
+    label: "Имя",
     placeholder: "Введите имя или название",
-  },
-
-  {
-    name: "cityLive",
-    type: "string",
-    options: {},
-    label: "Город вашего проживания (нахождения)",
-    placeholder: "Введите город проживания",
   },
   {
     name: "phone",
@@ -48,39 +40,32 @@ const requestTourFormConfig: FormFieldType[] = [
     label: "Контактные телефоны с кодом:",
     placeholder: "Введите номер телефона",
     helper: "Пожалуйста, внимательно проверьте номер",
+    rules: [{ required: true, message: "Это поле обязательно" }],
   },
   {
     name: "email",
     type: "string",
     options: {},
-    label: "Адрес электронной почты :",
-    placeholder: "Введите адрес почты",
-    helper: "Пожалуйста, внимательно проверьте адрес почты",
-    rules: [{ required: true, message: "Это поле обязательно" }],
+    label: "Email",
+    placeholder: "Email",
   },
   {
+    name: "startDateString",
     type: "string",
-    name: "startDate",
     options: {},
-    label: "Дата старта тура",
-    helper: "Можете ввести приблизительную дату",
-  },
-  {
-    name: "peoples",
-    type: "number",
-    options: {},
-    label: "Количество человек в группе:",
-    placeholder: "Введите количество человек",
+    label: "Желаемая дата выезда",
+    placeholder: "дата выезда",
   },
   {
     name: "comment",
-    type: "string",
+    type: "textArea",
     options: {},
-    label: "Ваш комментарий к заявке:",
+    label: "Комменатрий",
     placeholder: "Введите ваши пожелания",
   },
 ];
-function VoRequestForm() {
+
+function VoRequestTour() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const onNext = async (values: FormValues) => {
@@ -90,21 +75,21 @@ function VoRequestForm() {
       (Math.random() + 1).toString(36).substring(7),
       true
     );
-    //window.location.href = "/stranica-spasibo.html";
+    setIsOpen(false);
   };
   return (
     <div style={{ padding: 6, position: "relative" }}>
       <VoCtaButton onClick={() => setIsOpen(true)} text="Отправить заявку" />
 
-      <ModalWindow isVo={true} isOpen={isOpen} onClose={() => setIsOpen(false)}>
+      <ModalWindow isOpen={isOpen} onClose={() => setIsOpen(false)} isVo>
         <Form
           isOneColumn
-          title="Форма заявки на тур"
+          title="Заявка на тур"
           onSubmit={(val) => onNext(val)}
           config={requestTourFormConfig.map((el) =>
             addValueToField(el, {
               url: window.location.href,
-              formType: "Форма заявки на тур",
+              formType: "Форма заказа тура",
             } as unknown as FormValues)
           )}
           isLabelHidden={false}
@@ -117,4 +102,4 @@ function VoRequestForm() {
   );
 }
 
-export default VoRequestForm;
+export default VoRequestTour;

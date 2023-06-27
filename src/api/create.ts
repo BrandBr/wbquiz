@@ -4,7 +4,7 @@ import { message } from "antd";
 
 export enum TableName {
   WB_Quiz = "WB_Quiz",
-  VO_Quiz = 'VO_Quiz'
+  VO_Quiz = "VO_Quiz",
 }
 
 export enum Endpoints {

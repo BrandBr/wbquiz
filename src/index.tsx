@@ -7,7 +7,8 @@ import { QuizContextProvider } from "./context/QuizContext";
 import RequestForm from "./WbForms/RequestForm";
 import AskQuestion from "./WbForms/AskQuestion";
 import CallRequest from "./WbForms/CallRequest";
-import VoRequestForm from "./VoForms/VoRequestForm";
+import VoRequestFormBelarus from "./VoForms/VoRequestFormBelarus";
+import VoRequestTour from "./VoForms/VoRequestTour";
 
 const wbQuizContainer = document.getElementById("wbQuiz") as HTMLElement;
 if (wbQuizContainer) {
@@ -72,6 +73,20 @@ if (callRequestContainer) {
   );
 }
 
+// vo tours on wb
+const voRequestFormBelarusContainer = document.getElementById(
+  "voRequestFormBelarus"
+) as HTMLElement;
+if (voRequestFormBelarusContainer) {
+  const callRequest = ReactDOM.createRoot(voRequestFormBelarusContainer);
+
+  callRequest.render(
+    <React.StrictMode>
+      <VoRequestFormBelarus />
+    </React.StrictMode>
+  );
+}
+
 const voRequestFormContainer = document.getElementById(
   "voRequestForm"
 ) as HTMLElement;
@@ -80,7 +95,20 @@ if (voRequestFormContainer) {
 
   callRequest.render(
     <React.StrictMode>
-      <VoRequestForm />
+      <VoRequestTour />
+    </React.StrictMode>
+  );
+}
+
+const voRequestFormSecond = document.getElementById(
+  "voRequestFormSecond"
+) as HTMLElement;
+if (voRequestFormSecond) {
+  const callRequest = ReactDOM.createRoot(voRequestFormSecond);
+
+  callRequest.render(
+    <React.StrictMode>
+      <VoRequestTour />
     </React.StrictMode>
   );
 }
