@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c23812e-b8b9-4047-b05f-e88c5ba7f012" name="Changes" comment="add to window">
-      <change afterPath="$PROJECT_DIR$/src/VoForms/VoQuizOpened/VoQuizOpened.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VoForms/VoQuizOpened/VoQuizOpened.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/VoForms/VoQuizOpened/VoQuizOpened.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VoForms/VoQuizOpened/VoQuizOpened.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/VoForms/VoQuizOpened/VoQuizOpened.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Progress/Progress.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Progress/Progress.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Progress/ProgressBar/ProgressBar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Progress/ProgressBar/ProgressBar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Progress/ProgressBar/ProgressBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Progress/ProgressBar/ProgressBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Quiz/Quiz.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quiz/Quiz.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Quiz/StepView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quiz/StepView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/QuizContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/QuizContext.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,20 +36,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Женя/Documents/GitHub/VO",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Женя\\Documents\\GitHub\\wbquiz\\node_modules\\prettier",
-    "ts.external.directory.path": "C:\\Users\\Женя\\Documents\\GitHub\\wbquiz\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Женя/Documents/GitHub/wbquiz&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Женя\\Documents\\GitHub\\wbquiz\\node_modules\\prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Женя\\Documents\\GitHub\\wbquiz\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Женя\Documents\GitHub\wbquiz\src\components\VoCtaButton" />
@@ -145,7 +134,8 @@
       <workItem from="1687856786603" duration="134000" />
       <workItem from="1687857394948" duration="995000" />
       <workItem from="1687896118037" duration="4409000" />
-      <workItem from="1687935600411" duration="2916000" />
+      <workItem from="1687935600411" duration="3109000" />
+      <workItem from="1687940262044" duration="619000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1685557955931</created>
@@ -196,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687897262807</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add to window">
+      <created>1687939659955</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1687939659955</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

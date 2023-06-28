@@ -22,7 +22,6 @@ export const VoQuizConfig: FormFieldType[][] = [
       },
       label: "Длительность",
     },
-
     {
       name: "formType",
       type: "string",
@@ -73,21 +72,6 @@ export const VoQuizConfig: FormFieldType[][] = [
         ],
       },
       label: "Бюджет",
-    },
-  ],
-  [
-    {
-      type: "radioGroup",
-      name: "type",
-      options: {
-        dictionary: [
-          "Отельный/Пляжный отдых",
-          "Автобусные туры с отдыхом на море",
-          "Комбинированные туры",
-          "Экскурсионные туры",
-        ],
-      },
-      label: "Тип тура",
     },
   ],
   [
