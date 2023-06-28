@@ -16,7 +16,7 @@ export const Quiz = ({ titles, table, config, isVo }: QuizType) => {
 
   return (
     <>
-      <Progress currStep={currentStep} lastStep={stepLimit} />
+      <Progress currStep={currentStep} lastStep={stepLimit} isVo={isVo} />
       <div>
         <StepView config={config} table={table} titles={titles} isVo={isVo} />
       </div>

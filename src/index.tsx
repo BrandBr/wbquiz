@@ -119,9 +119,11 @@ if (voQuiz) {
   const callRequest = ReactDOM.createRoot(voQuiz);
 
   callRequest.render(
-    <React.StrictMode>
-      <VoQuizOpened />
-    </React.StrictMode>
+    <QuizContextProvider>
+      <React.StrictMode>
+        <VoQuizOpened />
+      </React.StrictMode>
+    </QuizContextProvider>
   );
 }
 

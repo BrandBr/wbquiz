@@ -21,9 +21,13 @@ export const QuizContext = createContext<QuizContextType>({
   currentStep: 1,
   stepLimit: 1,
   setCurrentStep: () => {},
-  setStepLimit: function (value: React.SetStateAction<number>): void {},
+  setStepLimit: function (value: React.SetStateAction<number>): void {
+    console.log(value);
+  },
   values: {},
-  setValues: function (value: React.SetStateAction<ValuesType>): void {},
+  setValues: function (value: React.SetStateAction<ValuesType>): void {
+    throw Error("Not implemented");
+  },
 });
 
 export const QuizContextProvider = ({
@@ -48,7 +52,7 @@ export const QuizContextProvider = ({
       values,
       setValues,
     };
-  }, [currentStep, setValues, stepLimit, values]);
+  }, [currentStep, setValues, stepLimit, values, setStepLimit]);
 
   return <QuizContext.Provider value={value}>{children}</QuizContext.Provider>;
 };

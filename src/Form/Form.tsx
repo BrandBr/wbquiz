@@ -133,8 +133,7 @@ export const Form = ({
         );
       case "multiSelect": {
         const options = (field.options.dictionary as string[])
-          ?.sort()
-          .map((item) => ({
+          ?.map((item) => ({
             label: item,
             value: item as string,
           }));
@@ -154,8 +153,9 @@ export const Form = ({
             placeholder={field.placeholder || "Выбирите значение"}
             key={key}
             showSearch
+            onChange={(value) => form.setFieldValue(field.name, value)}
           >
-            {(field.options.dictionary as string[])?.sort().map((item) => (
+            {(field.options.dictionary as string[])?.map((item) => (
               <Select.Option key={item as string} value={item as string}>
                 {item}
               </Select.Option>
@@ -167,7 +167,7 @@ export const Form = ({
       case "radioGroup":
         return (
           <Radio.Group key={key}>
-            {(field.options.dictionary as string[])?.sort().map((item) => (
+            {(field.options.dictionary as string[])?.map((item) => (
               <Radio value={item}> {item} </Radio>
             ))}
           </Radio.Group>
@@ -211,7 +211,7 @@ export const Form = ({
       {description && <Paragraph>{description}</Paragraph>}
       <div className={isOneColumn ? css.formContentOneColumn : css.formContent}>
         <div>
-          {config.map((optionSettings) => {
+          {(config || []).map((optionSettings) => {
             const {
               label,
               name,

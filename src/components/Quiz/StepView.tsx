@@ -26,7 +26,7 @@ export const StepView = ({
   } = useQuizContext();
 
   useEffect(() => {
-    setStepLimit(config?.length || 0);
+    setStepLimit(config.length);
   }, []);
 
   const onNext = async (valuesLocal: FormValues) => {
@@ -41,7 +41,7 @@ export const StepView = ({
         (Math.random() + 1).toString(36).substring(7),
         isVo
       );
-      window.location.href = "/stranica-spasibo.html";
+      window.location.href = isVo ? "https://www.vash-otdyh.by/" :  "/stranica-spasibo.html";
     }
   };
 
@@ -57,6 +57,7 @@ export const StepView = ({
           sight: [],
         } as FormValues)
       )}
+      isVo={isVo}
     />
   );
 };
