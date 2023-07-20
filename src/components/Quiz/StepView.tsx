@@ -9,12 +9,14 @@ type StepViewType = {
   config: FormFieldType[][];
   table: TableName;
   isVo?: boolean;
+  isPl?: boolean
 };
 export const StepView = ({
   titles,
   config,
   table,
   isVo = false,
+  isPl = false
 }: StepViewType): JSX.Element => {
   const {
     currentStep,
@@ -39,9 +41,11 @@ export const StepView = ({
         table,
         { ...values, ...valuesLocal } as FormValues,
         (Math.random() + 1).toString(36).substring(7),
-        isVo
+        isVo || isPl
       );
-      window.location.href = isVo ? "https://www.vash-otdyh.by/" :  "/stranica-spasibo.html";
+      window.location.href = isVo || !isPl
+        ? "https://www.vash-otdyh.by/"
+        : "/stranica-spasibo.html";
     }
   };
 
@@ -58,6 +62,7 @@ export const StepView = ({
         } as FormValues)
       )}
       isVo={isVo}
+      customButton={{text: isPl ? 'więcej' : 'далее'}}
     />
   );
 };

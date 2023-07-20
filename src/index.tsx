@@ -10,7 +10,10 @@ import CallRequest from "./WbForms/CallRequest";
 import VoRequestFormBelarus from "./VoForms/VoRequestFormBelarus";
 import VoRequestTour from "./VoForms/VoRequestTour";
 import { VoQuizOpened } from "./VoForms/VoQuizOpened/VoQuizOpened";
+import WbPlQuiz from "./WbForms/WbPlQuiz";
+import RequestFormWbPl from "./WbForms/RequestFormWbPl";
 
+//wb
 const wbQuizContainer = document.getElementById("wbQuiz") as HTMLElement;
 if (wbQuizContainer) {
   const root = ReactDOM.createRoot(wbQuizContainer);
@@ -124,6 +127,31 @@ if (voQuiz) {
         <VoQuizOpened />
       </React.StrictMode>
     </QuizContextProvider>
+  );
+}
+// wb pl
+const wbPlQuizContainer = document.getElementById("wbPlQuiz") as HTMLElement;
+if (wbPlQuizContainer) {
+  const root = ReactDOM.createRoot(wbPlQuizContainer);
+
+  root.render(
+    <QuizContextProvider>
+      <React.StrictMode>
+        <WbPlQuiz />
+      </React.StrictMode>
+    </QuizContextProvider>
+  );
+}
+
+const requestFormWBPlContainer = document.getElementById(
+  "requestFormWbPl"
+) as HTMLElement;
+if (requestFormWBPlContainer) {
+  const requestForm = ReactDOM.createRoot(requestFormWBPlContainer);
+  requestForm.render(
+    <React.StrictMode>
+      <RequestFormWbPl />
+    </React.StrictMode>
   );
 }
 

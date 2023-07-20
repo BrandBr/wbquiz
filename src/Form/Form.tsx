@@ -132,11 +132,10 @@ export const Form = ({
           />
         );
       case "multiSelect": {
-        const options = (field.options.dictionary as string[])
-          ?.map((item) => ({
-            label: item,
-            value: item as string,
-          }));
+        const options = (field.options.dictionary as string[])?.map((item) => ({
+          label: item,
+          value: item as string,
+        }));
         return (
           <Select
             key={key}

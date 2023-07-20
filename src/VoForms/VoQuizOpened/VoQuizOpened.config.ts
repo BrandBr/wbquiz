@@ -127,7 +127,7 @@ export const VoQuizConfig: FormFieldType[][] = [
       type: "select",
       name: "contactType",
       options: {
-        dictionary: ["Viber", "Telegram", "WhatsApp", 'Email', 'Телефон'],
+        dictionary: ["Viber", "Telegram", "WhatsApp", "Email", "Телефон"],
       },
       label: "Тип тура",
       helper: "Как с вами связаться",

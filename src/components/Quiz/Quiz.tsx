@@ -9,16 +9,22 @@ type QuizType = {
   config: FormFieldType[][];
   table: TableName;
   isVo?: boolean;
+  isPl?: boolean;
 };
 
-export const Quiz = ({ titles, table, config, isVo }: QuizType) => {
+export const Quiz = ({ titles, table, config, isVo, isPl }: QuizType) => {
   const { currentStep, stepLimit } = useQuizContext();
 
   return (
     <>
-      <Progress currStep={currentStep} lastStep={stepLimit} isVo={isVo} />
+      <Progress
+        currStep={currentStep}
+        lastStep={stepLimit}
+        isVo={isVo}
+        isPl={isPl}
+      />
       <div>
-        <StepView config={config} table={table} titles={titles} isVo={isVo} />
+        <StepView config={config} table={table} titles={titles} isVo={isVo} isPl={isPl} />
       </div>
     </>
   );
